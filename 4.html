@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do Círculo</title>
+</head>
+<body>
+    
+    <!--01. Escreva um programa que pede o raio de um círculo, e em seguida exiba o perímetro e área do círculo.-->
+
+    <form action="">
+        Digite o valor do Raio do Círculo: <br>
+        <input type="text" id="Raio">           <!-- Trocar "text" por "number" vai mudar para um modo seta-->
+        <br/><br/>
+        <button type="button" onclick="calcular()"> Calcular </button>
+    </form>
+    <div id="resposta"> </div>
+
+
+    <script>
+        function calcular(){
+            //obter o Valor do Raio
+            var raioj = document.getElementById("Raio").value;
+            //alert(raioj); para testar se o Java e o html estão conectados
+            //Converteu para real
+            raioj = parseFloat(raioj);
+            // calcular a area do círculo e o perímetro
+            var PI = 3.14159;
+            var areac = PI * Math.pow(raioj,2);
+            var perímetro = 2 * PI * raioj; 
+            // Saída --> 
+
+            document.getElementById("resposta").innerHTML = 
+            "ÁREA :"+ areac + "<br/>"+ "Perímetro "+ perímetro;
+        }
+    </script>
+
+</body>
+</html>
